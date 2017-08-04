@@ -13,11 +13,16 @@ header {
   margin-bottom: 32px;
 }
 
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
 article {
   background-color: #999999;
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: calc(33.33% - 15px); /* Leave several pixels for spacing between articles  */
   padding: 16px;
   border: 1px solid black;
 }
@@ -41,6 +46,26 @@ article > header {
 
 .sushi__header {
   background-color: #e5d198;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .chicken__article,.beef__article {
+    width: calc(50.0% - 10px); /* Leave several pixels for spacing between articles  */
+  }
+
+  .sushi__article {
+    width: 100%;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .chicken__article,.beef__article,.sushi__article {
+    width: 100%;
+  }
+  .beef__article,.sushi__article {
+    margin-top: 18px;
+  }
 }
 
 article > div {
