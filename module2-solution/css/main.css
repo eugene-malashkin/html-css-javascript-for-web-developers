@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+article {
+  background-color: #999999;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  padding: 16px;
+  border: 1px solid black;
+}
+
+article > header {
+  position: absolute;
+  right: -1px; /* In order to collapse borders of header and article itself */
+  top: -1px;   /* In order to collapse borders of header and article itself */
+  font-size: 1.25em;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+.chicken__header {
+  background-color: #d59898;
+}
+
+.beef__header {
+  background-color: #c14543;
+}
+
+.sushi__header {
+  background-color: #e5d198;
+}
+
+article > div {
+  margin-top: calc(1.25em + 16px);
+}
